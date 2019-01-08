@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>SSEngine</title>
+    <style>
+        .outer {
+            display: table;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background: black;
+            overflow: hidden;
+        }
+
+        .middle {
+            display: table-cell;
+            vertical-align: middle;
+            margin: 0;
+            padding: 0;
+        }
+
+        .inner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body class="outer">
+
+    <div class="middle">
+        <div class="inner" id="main-container">
+            <video class="video" width="100%" muted autoplay loop>' +
+                <source src="{{ resource.uri }}" type="{{ resource.mime }}">
+                Your browser does not support the video tag.</video>
+        </div>
+    </div>
+    <div style="position: absolute; display:block; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.1); z-index: 100;"></div>
+</body>
+</html>
