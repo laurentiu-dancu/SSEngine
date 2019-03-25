@@ -23,7 +23,7 @@ class SaverController extends AbstractController
         $savers = $finder->files()->in('videos');
         $files = [];
         foreach ($savers as $file) {
-            if ($file instanceof SplFileInfo && static::isVideo($file)) {
+            if ($file instanceof SplFileInfo && true) {
                 $files[] = $file;
             }
         }
@@ -43,7 +43,7 @@ class SaverController extends AbstractController
      */
     public static function isVideo(SplFileInfo $file) {
         $mime = $file->getExtension();
-        if ($mime == 'mp4' || $mime == 'webm') {
+        if ($mime == 'mp4' || $mime == 'webm' || $mime == 'ogg') {
             return true;
         }
 
