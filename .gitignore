@@ -6,3 +6,6 @@
 
 # Node stuff
 node_modules
+
+# Built stuff
+index.html
